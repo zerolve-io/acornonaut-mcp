@@ -1,0 +1,12 @@
+{
+  "name": "acornonaut-mcp",
+  "version": "1.0.0",
+  "private": false,
+  "description": "Public MCP wrapper repository for the hosted Acornonaut MCP server (AI-powered video learning).",
+  "homepage": "https://acornonaut.app",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zerolve-io/acornonaut-mcp.git"
+  },
+  "license": "MIT"
+}

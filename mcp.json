@@ -1,0 +1,30 @@
+{
+  "$schema": "https://mcp.so/schema.json",
+  "name": "acornonaut",
+  "display_name": "Acornonaut",
+  "description": "AI-powered video learning: turn YouTube playlists into flashcards and query your study library via MCP.",
+  "transport": {
+    "type": "http",
+    "url": "https://acornonaut.app/api/mcp"
+  },
+  "authentication": {
+    "type": "apiKey",
+    "in": "header",
+    "name": "Authorization",
+    "prefix": "Bearer "
+  },
+  "links": {
+    "homepage": "https://acornonaut.app",
+    "documentation": "https://acornonaut.app/docs/mcp",
+    "repository": "https://github.com/zerolve-io/acornonaut-mcp"
+  },
+  "tools": [
+    "list_playlists",
+    "get_playlist",
+    "create_playlist",
+    "get_cards",
+    "search_cards",
+    "get_quota",
+    "export_deck"
+  ]
+}
