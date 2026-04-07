@@ -11,7 +11,7 @@
       "headers": [
         {
           "name": "Authorization",
-          "description": "Bearer token for authentication",
+          "description": "Bearer token for authentication (get your API key at acornonaut.app)",
           "isSecret": true,
           "isRequired": true
         }
@@ -20,6 +20,6 @@
   ],
   "repository": {
     "url": "https://github.com/zerolve-io/acornonaut-mcp",
-    "source": "https://github.com/zerolve-io/acornonaut-mcp"
+    "source": "github"
   }
 }
