@@ -1,0 +1,25 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.zerolve-io/acornonaut",
+  "title": "Acornonaut",
+  "description": "Turn YouTube playlists into AI-generated flashcards with spaced repetition.",
+  "version": "1.0.0",
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://acornonaut.app/api/mcp",
+      "headers": [
+        {
+          "name": "Authorization",
+          "description": "Bearer token for authentication",
+          "isSecret": true,
+          "isRequired": true
+        }
+      ]
+    }
+  ],
+  "repository": {
+    "url": "https://github.com/zerolve-io/acornonaut-mcp",
+    "source": "https://github.com/zerolve-io/acornonaut-mcp"
+  }
+}
