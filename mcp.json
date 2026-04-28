@@ -1,30 +1,42 @@
 {
   "$schema": "https://mcp.so/schema.json",
   "name": "acornonaut",
-  "display_name": "Acornonaut",
-  "description": "AI-powered video learning: turn YouTube playlists into flashcards and query your study library via MCP.",
+  "display_name": "Acornonaut MCP Server",
+  "description": "AI-powered flashcard generation from YouTube videos with spaced repetition scheduling. Features SM-2 algorithm, Anki export, and full playlist management.",
+  "version": "2.5.4",
   "transport": {
     "type": "http",
-    "url": "https://acornonaut.app/api/mcp"
+    "url": "https://mcp.acornonaut.app"
   },
   "authentication": {
-    "type": "apiKey",
-    "in": "header",
-    "name": "Authorization",
-    "prefix": "Bearer "
+    "type": "oauth2",
+    "authorization_url": "https://mcp.acornonaut.app/oauth/authorize",
+    "token_url": "https://mcp.acornonaut.app/oauth/token"
   },
   "links": {
     "homepage": "https://acornonaut.app",
     "documentation": "https://acornonaut.app/docs/mcp",
-    "repository": "https://github.com/zerolve-io/acornonaut-mcp"
+    "repository": "https://github.com/zerolve-io/coursecards"
   },
+  "categories": ["education", "productivity", "learning"],
   "tools": [
     "list_playlists",
     "get_playlist",
     "create_playlist",
-    "get_cards",
+    "update_playlist",
+    "delete_playlist",
+    "add_video_by_url",
+    "get_video_cards",
+    "get_transcript",
+    "list_cards",
+    "get_card",
+    "create_card",
+    "update_card",
+    "delete_card",
     "search_cards",
-    "get_quota",
+    "review_due_cards",
+    "answer_card",
+    "get_review_stats",
     "export_deck"
   ]
 }
