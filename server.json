@@ -1,6 +1,6 @@
 {
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-  "name": "app.acornonaut/acornonaut",
+  "name": "io.github.zerolve-io/acornonaut",
   "title": "Acornonaut MCP Server",
   "description": "AI-powered flashcard generation from YouTube videos with spaced repetition scheduling. Features SM-2 algorithm, Anki export, and full playlist management.",
   "version": "2.5.4",
