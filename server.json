@@ -1,25 +1,25 @@
 {
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-  "name": "io.github.zerolve-io/acornonaut",
-  "title": "Acornonaut",
-  "description": "Turn YouTube playlists into AI-generated flashcards with spaced repetition.",
-  "version": "1.0.0",
+  "name": "app.acornonaut/acornonaut",
+  "title": "Acornonaut MCP Server",
+  "description": "AI-powered flashcard generation from YouTube videos with spaced repetition scheduling. Features SM-2 algorithm, Anki export, and full playlist management.",
+  "version": "2.5.4",
+  "homepage": "https://acornonaut.app",
+  "documentation": "https://acornonaut.app/docs/mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zerolve-io/coursecards"
+  },
+  "categories": ["education", "productivity", "learning"],
   "remotes": [
     {
       "type": "streamable-http",
-      "url": "https://acornonaut.app/api/mcp",
-      "headers": [
-        {
-          "name": "Authorization",
-          "description": "Bearer token for authentication (get your API key at acornonaut.app)",
-          "isSecret": true,
-          "isRequired": true
-        }
-      ]
+      "url": "https://mcp.acornonaut.app"
     }
   ],
-  "repository": {
-    "url": "https://github.com/zerolve-io/acornonaut-mcp",
-    "source": "github"
-  }
+  "author": {
+    "name": "Zerolve",
+    "url": "https://zerolve.io"
+  },
+  "license": "MIT"
 }
