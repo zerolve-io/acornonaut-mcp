@@ -6,7 +6,9 @@ This guide provides copy-paste content for submitting Acornonaut to MCP director
 
 ## ✅ Completed Submissions
 
-- **Official MCP Registry** ✅ Published as `io.github.zerolve-io/acornonaut` v2.5.4 (2026-06-07)
+- **Official MCP Registry** ✅ Published as `io.github.zerolve-io/acornonaut` v2.5.5 (2026-06-07)
+  - Updated with OAuth Authorization header documentation
+  - Live at: https://registry.modelcontextprotocol.io/
 - **awesome-mcp-servers** ✅ PR #7575 submitted (pending approval) (2026-06-07)
 - **mcp.so** ✅ Submitted (2026-06-07)
 - **Glama** ✅ Submitted (2026-06-07)
