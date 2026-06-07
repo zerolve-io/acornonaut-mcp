@@ -3,7 +3,7 @@
   "name": "io.github.zerolve-io/acornonaut",
   "title": "Acornonaut MCP Server",
   "description": "AI-powered YouTube to flashcards with spaced repetition and Anki export",
-  "version": "2.5.4",
+  "version": "2.5.5",
   "homepage": "https://acornonaut.app",
   "documentation": "https://acornonaut.app/docs/mcp",
   "repository": {
@@ -15,7 +15,15 @@
   "remotes": [
     {
       "type": "streamable-http",
-      "url": "https://mcp.acornonaut.app"
+      "url": "https://mcp.acornonaut.app",
+      "headers": [
+        {
+          "name": "Authorization",
+          "description": "Bearer token for authentication (get your OAuth token at https://acornonaut.app/oauth/authorize)",
+          "isRequired": true,
+          "isSecret": true
+        }
+      ]
     }
   ],
   "author": {
