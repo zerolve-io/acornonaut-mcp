@@ -4,10 +4,13 @@ This guide provides copy-paste content for submitting Acornonaut to MCP director
 
 ---
 
-## ✅ Already Completed
+## ✅ Completed Submissions
 
-- **Official MCP Registry** ✅ Published as `io.github.zerolve-io/acornonaut` v2.5.4
-- **awesome-mcp-servers** ✅ PR #7575 submitted (pending approval)
+- **Official MCP Registry** ✅ Published as `io.github.zerolve-io/acornonaut` v2.5.4 (2026-06-07)
+- **awesome-mcp-servers** ✅ PR #7575 submitted (pending approval) (2026-06-07)
+- **mcp.so** ✅ Submitted (2026-06-07)
+- **Glama** ✅ Submitted (2026-06-07)
+- **mcpmarket.com** ✅ Submitted (2026-06-07)
 
 ---
 
@@ -183,10 +186,10 @@ Thank you!
 
 ## ✅ Submission Checklist
 
-- [ ] mcp.so (5 min)
-- [ ] Glama (5 min)
-- [ ] PulseMCP (depends on process)
-- [ ] mcpmarket.com (depends on process)
+- [x] mcp.so ✅ (2026-06-07)
+- [x] Glama ✅ (2026-06-07)
+- [x] mcpmarket.com ✅ (2026-06-07)
+- [ ] PulseMCP (optional - requires finding contact/submission process)
 
 ---
 
