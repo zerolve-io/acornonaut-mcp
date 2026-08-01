@@ -1,0 +1,21 @@
+# Gitleaks configuration for acornonaut-mcp.
+#
+# One verified false positive:
+#
+#   `ak_your_api_key_here` — the placeholder in the curl example in README.md
+#   ("Authorization: Bearer ak_your_api_key_here"). The `curl-auth-header` rule
+#   matches any token-shaped string after an Authorization header; this one is
+#   documentation.
+#
+# Allowlisted by exact value, not by rule or by file, so a genuine key pasted
+# into the README still fails the build. This is a PUBLIC repository — a real
+# key landing here would be world-readable.
+
+[extend]
+useDefault = true
+
+[allowlist]
+description = "Verified false positives — see header."
+regexes = [
+  '''^ak_your_api_key_here$''',
+]
