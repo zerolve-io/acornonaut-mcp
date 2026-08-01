@@ -61,4 +61,8 @@ jobs:
           echo "$HOME/.local/bin" >> "$GITHUB_PATH"
 
       - name: Gitleaks — secret detection
-        run: gitleaks detect --source . --config .gitleaks.toml --no-banner
+      # --redact -v: on a failure the default output is just a count, which
+      # tells you nothing about what to look at. -v prints the rule, file and
+      # line for each finding; --redact replaces the matched value with
+      # REDACTED so the log never becomes a second copy of the leak.
+        run: gitleaks detect --source . --config .gitleaks.toml --no-banner --redact -v
