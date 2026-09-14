@@ -2,7 +2,7 @@
 
 Official MCP server for AI-powered flashcard generation from YouTube videos.
 
-**Production endpoint:** https://mcp.acornonaut.app
+**Production endpoint:** https://mcp.acornonaut.app/mcp
 
 ## For Glama Testing
 
@@ -16,7 +16,7 @@ This Dockerfile provides a lightweight proxy for Glama's automated checks. The p
 {
   "mcpServers": {
     "acornonaut": {
-      "url": "https://mcp.acornonaut.app"
+      "url": "https://mcp.acornonaut.app/mcp"
     }
   }
 }
@@ -25,4 +25,5 @@ This Dockerfile provides a lightweight proxy for Glama's automated checks. The p
 ## More Info
 
 - Documentation: https://acornonaut.app/docs/mcp
-- Main repository: https://github.com/zerolve-io/coursecards
+- Public repository: https://github.com/zerolve-io/acornonaut-mcp
+- Registry listing: `app.acornonaut/mcp` (official MCP Registry)
