@@ -1,0 +1,84 @@
+# Change the lifecycle status of this repo's OLD MCP Registry listing
+# (io.github.zerolve-io/acornonaut).
+#
+# Why this exists: the listing was superseded by app.acornonaut/mcp (published
+# from coursecards/mcp-server under the DNS-verified branded namespace), and
+# the interactive path to deprecate it is blocked — `mcp-publisher login
+# github` grants the io.github.zerolve-io/* namespace only when the OAuth
+# token can read org membership, and the org's OAuth app policy prevents
+# that (403 "You do not have publish or edit permissions", with no grant
+# request ever surfacing). GitHub Actions OIDC is the sanctioned bypass:
+# the registry trusts the workflow's identity token for this org's
+# namespace directly, no OAuth app involved.
+#
+# Manual-dispatch only. Defaults deprecate all versions with a supersession
+# message; the inputs allow reactivating later if that's ever needed.
+
+name: Registry listing status
+
+on:
+  workflow_dispatch:
+    inputs:
+      status:
+        description: New lifecycle status for io.github.zerolve-io/acornonaut
+        type: choice
+        options:
+          - deprecated
+          - active
+        default: deprecated
+      message:
+        description: Status message shown by registry clients (ignored for active)
+        type: string
+        default: "Superseded by app.acornonaut/mcp — same server, current version."
+
+permissions:
+  id-token: write # registry auth via GitHub Actions OIDC
+  contents: read
+
+jobs:
+  set-status:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Install mcp-publisher
+        run: |
+          curl -sSL "https://github.com/modelcontextprotocol/registry/releases/latest/download/mcp-publisher_linux_amd64.tar.gz" \
+            | tar xz mcp-publisher
+          ./mcp-publisher --help >/dev/null
+
+      - name: Login via GitHub Actions OIDC
+        run: ./mcp-publisher login github-oidc
+
+      - name: Update listing status
+        env:
+          NEW_STATUS: ${{ inputs.status }}
+          STATUS_MESSAGE: ${{ inputs.message }}
+        run: |
+          if [ "$NEW_STATUS" = "active" ]; then
+            # The registry rejects statusMessage on active
+            ./mcp-publisher status --status active --all-versions \
+              io.github.zerolve-io/acornonaut
+          else
+            ./mcp-publisher status --status "$NEW_STATUS" --all-versions \
+              --message "$STATUS_MESSAGE" \
+              io.github.zerolve-io/acornonaut
+          fi
+
+      - name: Verify
+        env:
+          NEW_STATUS: ${{ inputs.status }}
+        run: |
+          body=$(curl -sS "https://registry.modelcontextprotocol.io/v0/servers?search=acornonaut")
+          echo "$body" | python3 -c "
+          import json, os, sys
+          want = os.environ['NEW_STATUS']
+          data = json.load(sys.stdin)
+          rows = [s for s in data['servers']
+                  if s['server']['name'] == 'io.github.zerolve-io/acornonaut']
+          assert rows, 'listing not found in registry response'
+          for s in rows:
+              got = s['_meta']['io.modelcontextprotocol.registry/official']['status']
+              print(s['server']['version'], '->', got)
+              assert got == want, f'expected {want}, got {got}'
+          print('OK')
+          "
