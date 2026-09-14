@@ -54,12 +54,13 @@ jobs:
           NEW_STATUS: ${{ inputs.status }}
           STATUS_MESSAGE: ${{ inputs.message }}
         run: |
+          # --yes: the bulk confirmation prompt reads stdin, which is closed in CI
           if [ "$NEW_STATUS" = "active" ]; then
             # The registry rejects statusMessage on active
-            ./mcp-publisher status --status active --all-versions \
+            ./mcp-publisher status --status active --all-versions --yes \
               io.github.zerolve-io/acornonaut
           else
-            ./mcp-publisher status --status "$NEW_STATUS" --all-versions \
+            ./mcp-publisher status --status "$NEW_STATUS" --all-versions --yes \
               --message "$STATUS_MESSAGE" \
               io.github.zerolve-io/acornonaut
           fi
