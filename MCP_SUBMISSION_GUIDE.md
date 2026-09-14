@@ -31,11 +31,11 @@ This guide provides copy-paste content for submitting Acornonaut to MCP director
 | **Homepage** | `https://acornonaut.app` |
 | **Documentation** | `https://acornonaut.app/docs/mcp` |
 | **Short Description** | `AI-powered YouTube to flashcards with spaced repetition and Anki export` |
-| **Long Description** | `Acornonaut converts YouTube playlists into high-quality flashcards with spaced repetition scheduling (SM-2 algorithm). Features 18 MCP tools for playlist management, card search, semantic search, Anki/CSV/JSON export, and quota tracking. OAuth 2.0 authenticated endpoint at https://mcp.acornonaut.app` |
+| **Long Description** | `Acornonaut converts YouTube playlists into high-quality flashcards with spaced repetition scheduling (SM-2 algorithm). Features 20 MCP tools for playlist management, card search, semantic search, Anki/CSV/JSON export, and quota tracking. OAuth 2.0 authenticated endpoint at https://mcp.acornonaut.app/mcp` |
 | **Categories** | `Education, Learning, Productivity` |
 | **Tags** | `education, flashcards, youtube, spaced-repetition, anki, learning, study, sm2-algorithm` |
 | **Transport Type** | `Streamable HTTP` |
-| **Endpoint URL** | `https://mcp.acornonaut.app` |
+| **Endpoint URL** | `https://mcp.acornonaut.app/mcp` |
 | **Authentication** | `OAuth 2.0` |
 | **Platforms** | `macOS, Windows, Linux (all via HTTP)` |
 
@@ -44,7 +44,7 @@ This guide provides copy-paste content for submitting Acornonaut to MCP director
 {
   "mcpServers": {
     "acornonaut": {
-      "url": "https://mcp.acornonaut.app",
+      "url": "https://mcp.acornonaut.app/mcp",
       "transport": "streamable-http",
       "headers": {
         "Authorization": "Bearer <your-oauth-token>"
@@ -66,8 +66,8 @@ This guide provides copy-paste content for submitting Acornonaut to MCP director
 |-------|-------|
 | **Server Name** | `Acornonaut MCP Server` |
 | **Repository** | `https://github.com/zerolve-io/acornonaut-mcp` |
-| **Description** | `AI-powered YouTube playlist to flashcards with spaced repetition (SM-2 algorithm). 18 tools for playlist management, semantic search, and Anki export.` |
-| **Endpoint** | `https://mcp.acornonaut.app` |
+| **Description** | `AI-powered YouTube playlist to flashcards with spaced repetition (SM-2 algorithm). 20 tools for playlist management, semantic search, and Anki export.` |
+| **Endpoint** | `https://mcp.acornonaut.app/mcp` |
 | **Transport** | `streamable-http` |
 | **Has Dockerfile?** | `Yes (for introspection testing)` |
 | **OAuth Required?** | `Yes - OAuth 2.0` |
@@ -100,13 +100,13 @@ Server Details:
 - Repository: https://github.com/zerolve-io/acornonaut-mcp
 - Homepage: https://acornonaut.app
 - Documentation: https://acornonaut.app/docs/mcp
-- Endpoint: https://mcp.acornonaut.app
+- Endpoint: https://mcp.acornonaut.app/mcp
 - Transport: Streamable HTTP
 - Authentication: OAuth 2.0
 - Category: Education / Learning
 
 Description:
-AI-powered flashcard generation from YouTube playlists with spaced repetition scheduling. Features 18 MCP tools including semantic search, Anki export, and full playlist management.
+AI-powered flashcard generation from YouTube playlists with spaced repetition scheduling. Features 20 MCP tools including semantic search, Anki export, and full playlist management.
 
 Tools:
 - list_playlists, get_playlist, create_playlist
@@ -137,9 +137,9 @@ Thank you!
 |-------|-------|
 | **Product Name** | `Acornonaut` |
 | **Tagline** | `YouTube to Flashcards with AI` |
-| **Description** | `Turn YouTube playlists into spaced-repetition flashcards. 18 MCP tools for playlist management, semantic search, and Anki export. SM-2 algorithm for optimal learning.` |
+| **Description** | `Turn YouTube playlists into spaced-repetition flashcards. 20 MCP tools for playlist management, semantic search, and Anki export. SM-2 algorithm for optimal learning.` |
 | **Website** | `https://acornonaut.app` |
-| **MCP Endpoint** | `https://mcp.acornonaut.app` |
+| **MCP Endpoint** | `https://mcp.acornonaut.app/mcp` |
 | **GitHub** | `https://github.com/zerolve-io/acornonaut-mcp` |
 | **Category** | `Education` |
 | **Pricing** | `Freemium (Free tier + Pro plans)` |
@@ -164,7 +164,7 @@ Thank you!
 
 ## 📊 Key Metrics to Highlight
 
-- **18 MCP tools** (comprehensive toolkit)
+- **20 MCP tools** (comprehensive toolkit)
 - **OAuth 2.0 secure** (modern auth)
 - **Semantic search** (vector embeddings)
 - **SM-2 algorithm** (proven spaced repetition)

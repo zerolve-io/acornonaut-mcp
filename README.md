@@ -4,7 +4,7 @@
 
 **AI-powered flashcard generation from YouTube videos** — Turn any YouTube playlist into spaced-repetition flashcards and manage your learning library through any MCP-compatible AI client.
 
-This is the official MCP server for Acornonaut, hosted at `https://mcp.acornonaut.app`.
+This is the official MCP server for Acornonaut, hosted at `https://mcp.acornonaut.app/mcp` and listed in the [official MCP Registry](https://registry.modelcontextprotocol.io) as **`app.acornonaut/mcp`**. (The older registry entry `io.github.zerolve-io/acornonaut` is deprecated — same server, superseded name.)
 
 ## ✨ Features
 
@@ -25,7 +25,7 @@ Add to `~/Library/Application Support/Claude/claude_desktop_config.json`:
 {
   "mcpServers": {
     "acornonaut": {
-      "url": "https://mcp.acornonaut.app"
+      "url": "https://mcp.acornonaut.app/mcp"
     }
   }
 }
@@ -41,7 +41,7 @@ Add to `~/.cursor/mcp.json`:
 {
   "mcpServers": {
     "acornonaut": {
-      "url": "https://mcp.acornonaut.app",
+      "url": "https://mcp.acornonaut.app/mcp",
       "transport": "streamable-http"
     }
   }
@@ -53,7 +53,7 @@ Add to `~/.cursor/mcp.json`:
 Use MCP Server settings:
 
 - **Name:** `acornonaut`
-- **URL:** `https://mcp.acornonaut.app`
+- **URL:** `https://mcp.acornonaut.app/mcp`
 - **Transport:** `streamable-http`
 
 Or JSON config:
@@ -62,7 +62,7 @@ Or JSON config:
 {
   "mcpServers": {
     "acornonaut": {
-      "url": "https://mcp.acornonaut.app",
+      "url": "https://mcp.acornonaut.app/mcp",
       "transport": "streamable-http"
     }
   }
@@ -77,7 +77,7 @@ Add to your MCP config:
 {
   "mcpServers": {
     "acornonaut": {
-      "url": "https://mcp.acornonaut.app"
+      "url": "https://mcp.acornonaut.app/mcp"
     }
   }
 }
@@ -89,7 +89,7 @@ Add to your MCP config:
 {
   "mcpServers": {
     "acornonaut": {
-      "url": "https://mcp.acornonaut.app"
+      "url": "https://mcp.acornonaut.app/mcp"
     }
   }
 }
@@ -112,6 +112,7 @@ Acornonaut MCP uses **OAuth 2.0** for secure authentication:
 |------|-------------|
 | **Playlists** |
 | `list_playlists` | List all your playlists with status and progress |
+| `search_playlists` | Search playlists by name or topic |
 | `get_playlist` | Get a single playlist with videos and cards |
 | `create_playlist` | Create a new playlist from a YouTube URL |
 | `update_playlist` | Rename or update playlist settings |
@@ -127,12 +128,15 @@ Acornonaut MCP uses **OAuth 2.0** for secure authentication:
 | `update_card` | Edit a card's front, back, or metadata |
 | `delete_card` | Delete a specific card |
 | `search_cards` | Full-text search across all your cards |
+| `regenerate_cards` | Regenerate a video's cards with fresh AI output |
 | **Spaced Repetition** |
-| `review_due_cards` | Get cards due for review today |
-| `answer_card` | Submit review answer and update scheduling |
-| `get_review_stats` | View your review statistics and streaks |
+| `get_due_cards` | Get cards due for review today |
+| `record_review` | Submit a review answer and update scheduling |
+| `get_stats` | View your review statistics and streaks |
+| **Export** |
+| `export_deck` | Export a deck to Anki, CSV, or JSON |
 
-**Total:** 18 tools
+**Total:** 20 tools
 
 ## 📖 Example Usage
 
@@ -164,7 +168,7 @@ Ask your AI: "Export my 'Biology 101' playlist from Acornonaut as an Anki deck"
 
 - **Product:** https://acornonaut.app
 - **Documentation:** https://acornonaut.app/docs/mcp
-- **Main repository:** https://github.com/zerolve-io/coursecards
+- **MCP Registry listing:** [`app.acornonaut/mcp`](https://registry.modelcontextprotocol.io/v0/servers?search=acornonaut) in the official MCP Registry
 - **MCP Spec:** https://modelcontextprotocol.io
 
 ## 📝 License

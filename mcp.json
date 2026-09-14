@@ -3,10 +3,10 @@
   "name": "acornonaut",
   "display_name": "Acornonaut MCP Server",
   "description": "AI-powered flashcard generation from YouTube videos with spaced repetition scheduling. Features SM-2 algorithm, Anki export, and full playlist management.",
-  "version": "2.5.4",
+  "version": "3.1.1",
   "transport": {
     "type": "http",
-    "url": "https://mcp.acornonaut.app"
+    "url": "https://mcp.acornonaut.app/mcp"
   },
   "authentication": {
     "type": "oauth2",
@@ -16,11 +16,16 @@
   "links": {
     "homepage": "https://acornonaut.app",
     "documentation": "https://acornonaut.app/docs/mcp",
-    "repository": "https://github.com/zerolve-io/coursecards"
+    "repository": "https://github.com/zerolve-io/acornonaut-mcp"
   },
-  "categories": ["education", "productivity", "learning"],
+  "categories": [
+    "education",
+    "productivity",
+    "learning"
+  ],
   "tools": [
     "list_playlists",
+    "search_playlists",
     "get_playlist",
     "create_playlist",
     "update_playlist",
@@ -34,9 +39,10 @@
     "update_card",
     "delete_card",
     "search_cards",
-    "review_due_cards",
-    "answer_card",
-    "get_review_stats",
+    "get_due_cards",
+    "record_review",
+    "get_stats",
+    "regenerate_cards",
     "export_deck"
   ]
 }
