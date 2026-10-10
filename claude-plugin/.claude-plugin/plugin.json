@@ -1,7 +1,7 @@
 {
   "name": "acornonaut",
   "displayName": "Acornonaut",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Turn YouTube videos into spaced-repetition flashcards and study them with Claude.",
   "author": {
     "name": "Zerolve",
