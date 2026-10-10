@@ -178,3 +178,8 @@ MIT License - see [LICENSE](LICENSE) file.
 ---
 
 **Built with** ❤️ **by the Acornonaut team**
+
+## Claude plugin
+
+[`claude-plugin/`](claude-plugin/) is the Acornonaut plugin for Anthropic's Claude directory: this
+server plus a study skill. It is submitted from this repository with plugin path `claude-plugin`.
