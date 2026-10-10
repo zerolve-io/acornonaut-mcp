@@ -1,0 +1,27 @@
+{
+  "name": "acornonaut",
+  "displayName": "Acornonaut",
+  "version": "1.0.0",
+  "description": "Turn YouTube videos into spaced-repetition flashcards and study them with Claude.",
+  "author": {
+    "name": "Zerolve",
+    "email": "support@acornonaut.app",
+    "url": "https://zerolve.io"
+  },
+  "homepage": "https://acornonaut.app",
+  "repository": "https://github.com/zerolve-io/acornonaut-mcp",
+  "license": "MIT",
+  "keywords": [
+    "flashcards",
+    "spaced-repetition",
+    "youtube",
+    "study",
+    "learning",
+    "anki"
+  ],
+  "icon": "./assets/acornonaut.png",
+  "documentationUrl": "https://acornonaut.app/docs/mcp",
+  "supportUrl": "https://acornonaut.app/support",
+  "privacyPolicyUrl": "https://acornonaut.app/privacy",
+  "termsOfServiceUrl": "https://acornonaut.app/terms"
+}
