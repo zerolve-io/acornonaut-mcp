@@ -19,7 +19,7 @@ This is the official MCP server for Acornonaut, hosted at `https://mcp.acornonau
 
 ### Claude (web, desktop, mobile)
 
-Add Acornonaut from [Claude's connector directory](https://claude.ai/directory/connectors/acornonaut), then sign in with your Acornonaut account. No config file needed.
+Add Acornonaut from [Claude's connector directory](https://claude.ai/directory/d07d76c3-ef8a-49b3-a2e7-16f49542cba1), then sign in with your Acornonaut account. No config file needed.
 
 ### Claude Desktop (config file)
 
