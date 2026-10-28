@@ -2,7 +2,7 @@
 # This is a lightweight proxy for Glama's introspection checks
 # The actual MCP server is hosted at https://mcp.acornonaut.app
 
-FROM node:20-alpine
+FROM node:26-alpine
 
 WORKDIR /app
 
