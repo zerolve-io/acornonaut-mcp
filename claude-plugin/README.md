@@ -2,8 +2,9 @@
 
 Acornonaut turns YouTube videos and playlists into spaced-repetition flashcards. This plugin
 connects Claude to your Acornonaut account so you can add a video by link and have cards generated
-from its transcript, run a review session on the cards that are due today, search and edit your
-cards and playlists, check your study stats, and export a deck to Anki, CSV, JSON or Markdown.
+from its transcript, follow a guided Learning Mission such as Master Rust or Master Coding Agents,
+run a review session on the cards that are due today, search and edit your cards and playlists,
+check your study stats, and export a deck to Anki, CSV, JSON or Markdown.
 
 ## Install
 
@@ -14,8 +15,8 @@ Claude Code.
 
 - **MCP server** (`.mcp.json`): the remote Acornonaut server at `https://mcp.acornonaut.app/mcp`.
   You sign in with your Acornonaut account through OAuth the first time Claude uses it.
-- **Skill** `acornonaut-study`: tells Claude how to make cards from a video, run a review session
-  with Again / Hard / Good / Easy ratings, and export decks.
+- **Skill** `acornonaut-study`: tells Claude how to make cards from a video, start and follow a
+  Learning Mission, run a review session with Again / Hard / Good / Easy ratings, and export decks.
 
 The plugin runs no local code and installs no packages.
 

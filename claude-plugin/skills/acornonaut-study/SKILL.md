@@ -1,6 +1,6 @@
 ---
 name: acornonaut-study
-description: Study with Acornonaut flashcards. Use when the user wants to turn a YouTube video into flashcards, review or get quizzed on the cards that are due, find cards on a topic, check study progress, or export a deck to Anki, CSV, JSON or Markdown.
+description: Study with Acornonaut flashcards. Use when the user wants to turn a YouTube video into flashcards, follow a Learning Mission such as Master Rust or Master Coding Agents, review or get quizzed on the cards that are due, find cards on a topic, check study progress, or export a deck to Anki, CSV, JSON or Markdown.
 ---
 
 # Studying with Acornonaut
@@ -18,9 +18,27 @@ data lives in the user's Acornonaut account and is reached through the `acornona
 4. If a video finishes with no cards, `regenerate_cards` retries generation. Only set
    `deleteExisting: true` when the user asks to replace cards they already have.
 
+## Follow a Learning Mission
+
+Learning Missions are guided courses (for example Master Rust and Master Coding Agents): modules
+in order, each with shared flashcards, practice exercises and a project checkpoint. Acornonaut
+keeps a mission's cards current as its subject changes.
+
+1. `list_missions` shows the missions and which ones the user has started.
+2. To start one, ask the user's level (beginner, intermediate or advanced) and, if they want to
+   change it, their study time per day (15 minutes by default). Then call `start_mission` with the
+   `missionId`, `level` and `dailyMinutes`. Starting a mission they stopped earlier resumes it with
+   their progress kept.
+3. `get_mission` shows progress per module: whether it is unlocked, cards learned and due, its
+   source, exercises and project checkpoint. Use it to suggest what to study or build next.
+4. Mission cards are reviewed like any other cards (below). Pass `missionId` to `get_due_cards` to
+   review one mission only. Once the user has reviewed 80% of the unlocked cards, the next module
+   opens; when `record_review` reports a newly unlocked module, tell the user.
+
 ## Run a review session
 
-1. Call `get_due_cards` (optionally with a `playlistId`). If nothing is due, say so and stop.
+1. Call `get_due_cards` (optionally with a `playlistId` or a `missionId`). The queue mixes
+   playlist cards and cards from missions the user has started. If nothing is due, say so and stop.
 2. Show one card at a time: the question first, "Card N of Total", and wait for the user's answer.
 3. Reveal the answer, then ask how well they knew it: Again (1), Hard (2), Good (3) or Easy (4).
    Let the user rate it. Don't pick the rating for them; suggest "Again" when they couldn't recall
@@ -31,7 +49,8 @@ data lives in the user's Acornonaut account and is reached through the `acornona
 ## Find, edit and organise
 
 - Topic questions ("my cards about X"): `search_cards`.
-- Library overview: `list_playlists`, `get_playlist`, `get_stats`.
+- Library overview: `list_playlists`, `get_playlist`, `get_stats`; missions: `list_missions`,
+  `get_mission`.
 - Fixing a card: `update_card`; adding one: `create_card`. Confirm before `delete_card` or
   `delete_playlist`, which are permanent (deleting a playlist removes its videos and cards).
 

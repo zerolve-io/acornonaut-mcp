@@ -43,6 +43,9 @@
     "record_review",
     "get_stats",
     "regenerate_cards",
-    "export_deck"
+    "export_deck",
+    "list_missions",
+    "get_mission",
+    "start_mission"
   ]
 }
