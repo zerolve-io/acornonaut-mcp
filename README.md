@@ -139,8 +139,14 @@ Acornonaut MCP uses **OAuth 2.0** for secure authentication:
 | `get_stats` | View your review statistics and streaks |
 | **Export** |
 | `export_deck` | Export a deck to Anki, CSV, or JSON |
+| **Learning Missions** |
+| `list_missions` | List guided courses such as Master Rust and Master Coding Agents, and which you have started |
+| `get_mission` | Get a mission with your progress per module, its exercises and project checkpoints |
+| `start_mission` | Start or resume a mission at your level and daily study time |
 
-**Total:** 20 tools
+`get_due_cards` also takes a `missionId`, and its queue includes the cards of missions you have started.
+
+**Total:** 23 tools
 
 ## 📖 Example Usage
 
