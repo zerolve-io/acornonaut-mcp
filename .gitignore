@@ -1,0 +1,3 @@
+
+# Claude Code: personal permissions ("don't ask again") can contain secrets
+**/.claude/settings.local.json
